@@ -1,3 +1,4 @@
+import { PrimeNgModule } from './../../shared-components/prime-ng/prime-ng.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -9,7 +10,9 @@ import { HomeComponent } from './home.component';
   declarations: [HomeComponent],
   imports: [
     CommonModule,
-    HomeRoutingModule
-  ]
+    HomeRoutingModule,
+    PrimeNgModule
+  ],
+  exports:[HomeComponent]
 })
 export class HomeModule { }
