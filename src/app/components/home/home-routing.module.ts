@@ -8,6 +8,10 @@ const routes: Routes = [
     loadChildren: () => import('../single-player/single-player.module').then(m => m.SinglePlayerModule)
   },
   {
+    path: 'multiplayer',
+    loadChildren: () => import('../multi-player/multi-player.module').then(m => m.MultiPlayerModule)
+  },
+  {
     path:'',
     component:HomeComponent
   }
