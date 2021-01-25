@@ -4,7 +4,8 @@ import {ButtonModule} from 'primeng/button';
 import {AvatarModule} from 'primeng/avatar';
 import {DialogModule} from 'primeng/dialog';
 import {BlockUIModule} from 'primeng/blockui';
-
+import { MessagesModule } from 'primeng/messages';
+import { ConfirmDialogModule } from 'primeng/confirmdialog';
 
 
 
@@ -15,13 +16,17 @@ import {BlockUIModule} from 'primeng/blockui';
     ButtonModule,
     AvatarModule,
     DialogModule,
-    BlockUIModule
+    BlockUIModule,
+    MessagesModule,
+    ConfirmDialogModule
   ],
   exports:[
     ButtonModule,
     AvatarModule,
     DialogModule,
-    BlockUIModule
+    BlockUIModule,
+    MessagesModule,
+    ConfirmDialogModule
   ]
 })
 export class PrimeNgModule { }

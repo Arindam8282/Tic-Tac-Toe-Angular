@@ -9,7 +9,7 @@ import { CommonModule } from '@angular/common';
   declarations: [GameComponent],
   imports: [
     CommonModule,
-    PrimeNgModule
+    PrimeNgModule,
   ],
   exports:[
     GameComponent

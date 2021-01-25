@@ -5,7 +5,8 @@
 
 <div class="wrapper">
   <div class="turn">
-    <h3 style="color: aliceblue;">{{gameData.playerTurn}} turn</h3>
+    <button pButton routerLink="home" (click)="confirm1()" icon="pi pi-sign-out" class="p-button-rounded p-button-warning p-button-text p-button-lg"></button>
+    <h3 style="color: aliceblue;align-self: center;">{{gameData.playerTurn}} turn</h3>
   </div>
   <div class="game">
     <div class="cells">      
@@ -20,5 +21,7 @@
     <h3 style="color: aliceblue;">Oponents score :{{gameData.opoScore}}</h3>
   </div>
   <button (click)="reset()" pButton styleClass="p-button-lg" class="p-button-danger reset" type="button" label="Reset"></button>
+  <p-confirmDialog [baseZIndex]="10000"></p-confirmDialog>
+  <p-messages [value]="msgs"></p-messages>
 </div>
 

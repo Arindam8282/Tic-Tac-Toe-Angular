@@ -1,4 +1,10 @@
 .wrapper{
+  .turn{
+    gap: 10px;
+    width: 200px;
+    display: flex;
+    justify-content: flex-start;
+  }
   .game{
     .cells{
       .cell{
