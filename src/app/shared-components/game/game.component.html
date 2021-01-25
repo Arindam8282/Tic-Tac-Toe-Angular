@@ -1,1 +1,24 @@
-<p>game works!</p>
+<p-blockUI [target]="" [blocked]="blocked">
+    <h2 style="color: aliceblue;">oponents turn please wait</h2>
+    <i class="pi pi-spinner pi-spin" style="font-size: 3rem;color: aliceblue;"></i>
+</p-blockUI>
+
+<div class="wrapper">
+  <div class="turn">
+    <h3 style="color: aliceblue;">{{playerTurn}} turn</h3>
+  </div>
+  <div class="game">
+    <div class="cells">      
+        <button *ngFor="let item of arr;let i=index" (click)="insert(i)" class="cell" type="button">
+          <i class="pi {{item}}" style="font-size: 2rem"></i>
+        </button>
+    </div>
+  </div>
+  <div class="score-board">
+    <h3 style="color: aliceblue;">Your score :{{yourScore}}</h3>
+    <h3 style="color: aliceblue;">Tied :{{tied}}</h3>
+    <h3 style="color: aliceblue;">Oponents score :{{opoScore}}</h3>
+  </div>
+  <button (click)="reset()" pButton styleClass="p-button-lg" class="p-button-danger reset" type="button" label="Reset"></button>
+</div>
+

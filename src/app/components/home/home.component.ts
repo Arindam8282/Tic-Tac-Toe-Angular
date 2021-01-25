@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import {PrimeIcons} from 'primeng/api';
 @Component({
   selector: 'home',
   templateUrl: './home.component.html',

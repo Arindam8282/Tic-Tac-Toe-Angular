@@ -1,13 +1,18 @@
+import { GameComponent } from './../game/game.component';
+import { PrimeNgModule } from './../prime-ng/prime-ng.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { GameComponent } from '../game/game.component';
 
 
 
 @NgModule({
   declarations: [GameComponent],
   imports: [
-    CommonModule
+    CommonModule,
+    PrimeNgModule
+  ],
+  exports:[
+    GameComponent
   ]
 })
 export class SharedModule { }
