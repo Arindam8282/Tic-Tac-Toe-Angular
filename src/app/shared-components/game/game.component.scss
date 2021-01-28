@@ -1,9 +1,8 @@
 .wrapper{
-  .turn{
-    gap: 10px;
-    width: 200px;
+  .close-btn{
+    width: 300px;
     display: flex;
-    justify-content: flex-start;
+    justify-content: flex-end;
   }
   .game{
     .cells{
@@ -16,6 +15,9 @@
       }
       .cell:hover{
         cursor: pointer;
+      }
+      .dis-cursor:hover{
+        cursor: no-drop;
       }
       gap: 5px;
       margin-left: 27px;
