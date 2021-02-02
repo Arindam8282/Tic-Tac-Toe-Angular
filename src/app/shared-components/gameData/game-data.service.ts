@@ -8,6 +8,7 @@ export class GameDataService {
   winner: String = '';
   arr: String[]=['','','','','','','','',''];
   blocked: boolean = false;
+  holder: String;
   playerTurn: String = "Your";
   player1Name: String  = "Player1";
   player2Name: String  = "Player2";

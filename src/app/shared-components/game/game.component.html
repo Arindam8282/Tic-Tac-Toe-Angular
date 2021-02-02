@@ -1,25 +1,69 @@
-<p-blockUI [target]="" [blocked]="gameData.blocked">
-    <h2 style="color: aliceblue;">oponents turn please wait</h2>
+<p-blockUI [target]="game" [blocked]="gameData.blocked">
+  <div class="turn_wait">
+    <h3 style="color: aliceblue;">oponents turn please wait</h3>
     <i class="pi pi-spinner pi-spin" style="font-size: 3rem;color: aliceblue;"></i>
+  </div>
 </p-blockUI>
 <p-blockUI [target]="" [blocked]="gameover">
   <h2 style="color: aliceblue;">Game Over</h2>
 </p-blockUI>
-
-<div class="wrapper">
-  <div class="close-btn">
-    <button pButton routerLink="home" (click)="confirm1()" icon="pi pi-times" class="p-button-rounded p-button-warning p-button-text p-button-lg"></button>
+<p-toast key='myKey1'></p-toast>
+<div class="room-info {{hideRoom(Visible)}}">
+  <div class="back">
+    <button pButton (click)="goBack()" icon="pi pi-arrow-left" class="p-button-rounded p-button-info p-button-text p-button-lg"></button>
   </div>
-  <div class="turn">
-    <h3 style="color: aliceblue;align-self: center;">{{gameData.playerTurn}} turn</h3>
-  </div>
-  <div class="game">
-    <div class="cells">      
-        <button *ngFor="let item of gameData.arr;let i=index" (click)="insert(i,gameData.player1Icon)"  class="cell {{ability(item)}}" type="button">
-          <i class="pi {{item}}" style="font-size: 2rem"></i>
-        </button>
+  <input type="text" [(ngModel)]="socketService.playerName" pInputText class="p-inputtext-lg"  placeholder="Enter Name" required> 
+  <div class="p-col-12 p-md-4">
+    <div class="p-inputgroup">
+        <input class="trans-inp" type="text" [(ngModel)]="socketService.roomName" placeholder="Enter Room" required>
+        <button pButton pRipple type="button" (click)="login(socketService.roomName)" label="Create" class="p-button-primary"></button>   
     </div>
   </div>
+  <div class="p-col-12 p-md-4">
+    <div class="p-inputgroup">
+        <input class="trans-inp" type="text" [(ngModel)]="socketService.roomName" placeholder="Enter Room" required>
+        <button pButton pRipple type="button" (click)="login(socketService.roomName)" label="Join" class="p-button-primary"></button>   
+    </div>
+  </div>  
+</div>
+<div class="wrapper {{visibility(Visible)}}">
+  <p-dialog [(visible)]="chatDis">
+    <ng-template pTemplate="header">
+      <h2>Chats</h2>
+    </ng-template>
+    <p-messages [(value)]="socketService.myData"></p-messages>
+    <p-footer>
+      <div class="p-col-12 p-md-4">
+        <div class="p-inputgroup">
+            <input type="text" [(ngModel)]="socketService.sendMessage" pInputText placeholder="Keyword">   
+            <button type="button" (click)="sendChat(socketService.sendMessage)" pButton icon="pi pi-arrow-right"></button>    
+        </div>
+      </div>
+    </p-footer>
+  </p-dialog>
+  <div class="close-btn">
+    <button pButton [(disabled)]="chat" (click)="openChat()" icon="pi pi-comments" class="p-button-rounded p-button-text p-button-lg"></button>
+    <!-- <h1 style="color: aliceblue;align-self: center;">{{socketService.roomName}}</h1> -->
+    <div class="">
+      <p-chip [label]="socketService.roomName" styleClass="p-mr-2 custom-chip"></p-chip>
+    </div>
+    <button pButton routerLink="home" (click)="confirm1()" icon="pi pi-times" class="p-button-rounded p-button-warning p-button-text p-button-lg"></button>
+  </div>
+  
+  <p-panel #game styleClass="p-mt-0">
+    <ng-template pTemplate="header">
+      <div class="turn">
+        <h3 style="align-self: center;">{{gameData.playerTurn}} turn</h3>
+      </div>
+    </ng-template>
+      <div class="game p-m-0">
+        <div class="cells">      
+            <button *ngFor="let item of gameData.arr;let i=index" (click)="insert(i,gameData.player1Icon)"  class="cell {{ability(item)}}" type="button">
+              <i class="pi {{item}}" style="font-size: 2rem"></i>
+            </button>
+        </div>
+    </div>
+  </p-panel>
   <div class="score-board">
     <h3 style="color: aliceblue;">Your score :{{gameData.yourScore}}</h3>
     <h3 style="color: aliceblue;">Tied :{{gameData.tied}}</h3>
@@ -27,6 +71,5 @@
   </div>
   <button (click)="reset()" pButton styleClass="p-button-lg" class="p-button-danger reset" type="button" label="Reset"></button>
   <p-confirmDialog [baseZIndex]="10000"></p-confirmDialog>
-  <p-messages [value]="msgs"></p-messages>
 </div>
 

@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./single-player.component.scss']
 })
 export class SinglePlayerComponent implements OnInit {
-
+  dMulti: boolean = false;
   constructor() { }
 
   ngOnInit(): void {

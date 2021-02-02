@@ -1,8 +1,16 @@
 .wrapper{
+  .turn{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
   .close-btn{
+    .custom-chip{
+      background-color: #a3ddcb;
+    }
     width: 300px;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
   }
   .game{
     .cells{
@@ -24,11 +32,18 @@
       display: flex;
       flex-wrap: wrap;
     }
+    background-color: #1e1e1e;
     height: 250px;
     width: 250px;
     display: flex;
     align-items: center;
   
+  }
+  .turn_wait{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   .reset{
     padding-left: 100px;
@@ -42,7 +57,41 @@
   justify-content: space-around;
   align-items: center;
 }
+.room-info{
+  .back{
+    width: 400px;
+    display: flex;
+    justify-content: flex-end;
+  }
+  height: 500px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+
+.p-inputgroup{
+  ::placeholder{
+    color: #ffffff;
+  }
+}
+.trans-inp{
+  font-size: 95%;
+  outline: none;
+  background-color: transparent;
+  color: white;
+  border: none;
+  border-bottom: 2px solid white;
+}
+:host ::ng-deep .p-chip.custom-chip {
+  background: var(--primary-color);
+  color: var(--primary-color-text);
+}
 .waiting-msg{
   display: flex;
   flex-direction: column;
+}
+.d-none{
+  display: none;
 }

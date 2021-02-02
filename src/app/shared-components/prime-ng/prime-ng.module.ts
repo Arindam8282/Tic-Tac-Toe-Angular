@@ -5,7 +5,14 @@ import {AvatarModule} from 'primeng/avatar';
 import {DialogModule} from 'primeng/dialog';
 import {BlockUIModule} from 'primeng/blockui';
 import { MessagesModule } from 'primeng/messages';
+import {MessageModule} from 'primeng/message';
 import { ConfirmDialogModule } from 'primeng/confirmdialog';
+import {InputTextModule} from 'primeng/inputtext';
+import { ChipModule } from 'primeng/chip';
+import {ToastModule} from 'primeng/toast';
+import {PanelModule} from 'primeng/panel';
+
+
 
 
 
@@ -18,7 +25,12 @@ import { ConfirmDialogModule } from 'primeng/confirmdialog';
     DialogModule,
     BlockUIModule,
     MessagesModule,
-    ConfirmDialogModule
+    MessageModule,
+    ConfirmDialogModule,
+    InputTextModule,
+    ChipModule,
+    ToastModule,
+    PanelModule
   ],
   exports:[
     ButtonModule,
@@ -26,7 +38,12 @@ import { ConfirmDialogModule } from 'primeng/confirmdialog';
     DialogModule,
     BlockUIModule,
     MessagesModule,
-    ConfirmDialogModule
+    MessageModule,
+    ConfirmDialogModule,
+    InputTextModule,
+    ChipModule,
+    ToastModule,
+    PanelModule
   ]
 })
 export class PrimeNgModule { }
