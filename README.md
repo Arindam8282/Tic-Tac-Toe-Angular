@@ -1,13 +1,13 @@
 # TicTacToe
 
 A small open source singleplayer and multiplayer game project
-![](src/assests/images/land_page.png)
-![](src/assests/images/single_player.png)
+![](src/assets/images/land_page.png)
+![](src/assets/images/single_player.png)
 here you can play it with a BOT
-![](src/assests/images/multi_player.png)
+![](src/assets/images/multi_player.png)
 here you have to enter your name on the top text input box
 and then enter any room id to create or to join a room
-![](src/assests/images/chats_nd_multi.png)
+![](src/assets/images/chats_nd_multi.png)
 here You can play it with your friends and also can chat using chat section
 
 frontend build is uploaded in netlify and the node socket server is running in my heroku account
