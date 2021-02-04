@@ -1,9 +1,11 @@
 # TicTacToe
 
 A small open source singleplayer and multiplayer game project
-![](src/assets/images/land_page.png)
-![](src/assets/images/single_player.png)
-here you can play it with a BOT
+![](src/assets/images/land_page.png).
+single player version.
+here you can play it with a BOT.
+![](src/assets/images/single_player.png).
+Multiplayer Version.
 ![](src/assets/images/multi_player.png)
 here you have to enter your name on the top text input box
 and then enter any room id to create or to join a room
