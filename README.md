@@ -1,7 +1,22 @@
 # TicTacToe
 
+A small open source singleplayer and multiplayer game project
+![](src/assests/images/land_page.png)
+![](src/assests/images/single_player.png)
+here you can play it with a BOT
+![](src/assests/images/multi_player.png)
+here you have to enter your name on the top text input box
+and then enter any room id to create or to join a room
+![](src/assests/images/chats_nd_multi.png)
+here You can play it with your friends and also can chat using chat section
+
+frontend build is uploaded in netlify and the node socket server is running in my heroku account
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.0.
 
+## Developer Contact
+Arindam Dutta
+mail: darindam507@gmail.com
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.

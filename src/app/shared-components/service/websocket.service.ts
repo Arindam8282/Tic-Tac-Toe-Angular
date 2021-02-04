@@ -21,7 +21,9 @@ export class WebsocketService {
   playerName: string = "Player1"
   roomName: String = "Player1";
   myData: Message[];
-  url: String = "wss://arindam-tic-tac-toe.herokuapp.com";
+  // url: String = "wss://arindam-tic-tac-toe.herokuapp.com";
+  url: String = "ws://192.168.1.8:3000";
+
   constructor() {
     this.socket = io(this.url);
    }

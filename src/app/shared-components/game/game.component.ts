@@ -40,12 +40,16 @@ export class GameComponent implements OnInit {
       if(this.socketService.receive.param.roomMember==2) {
         return this.messageService.add({key: 'myKey1',severity:'error', summary:this.socketService.receive.param.roomName, detail:'room is full'});
       }
-      if(this.socketService.receive.param.hostName==this.socketService.playerName) this.gameData.blocked=false;
+      if(this.socketService.receive.param.hostName==this.socketService.playerName) {
+        this.gameData.blocked=false;
+        this.gameData.player1Icon = "pi-check";
+      } 
       else{
         this.gameData.blocked=true;
         this.gameData.holder = this.gameData.player1Icon;
         this.gameData.player1Icon = this.gameData.player2Icon;
         this.gameData.player2Icon = this.gameData.holder;
+        // this.gameData.player1Icon = "pi-times";
       } 
       this.reset();
       this.Visible = true;
