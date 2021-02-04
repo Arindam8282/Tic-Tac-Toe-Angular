@@ -10,7 +10,9 @@ and then enter any room id to create or to join a room
 ![](src/assets/images/chats_nd_multi.png)
 here You can play it with your friends and also can chat using chat section
 
-frontend build is uploaded in netlify and the node socket server is running in my heroku account
+frontend build is uploaded in netlify and the node socket server is running in my heroku account.
+
+this version is still has many bugs in it so i'm working on it.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.0.
 
