@@ -1,5 +1,7 @@
 # TicTacToe
-
+### link for website
+[visit tictactoe](https://ad-tic-tac-toe.netlify.app/home)
+---
 A small open source singleplayer and multiplayer game project
 ![](src/assets/images/land_page.png).
 ## single player version.here you can play it with a BOT.
